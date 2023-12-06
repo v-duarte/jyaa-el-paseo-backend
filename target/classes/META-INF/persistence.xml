@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+ http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+
+	<persistence-unit name="aplicacion">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<class>persistencia.entidades.Direccion</class>
+		<class>persistencia.entidades.ItemProducto</class>
+		<class>persistencia.entidades.Pedido</class>
+		<class>persistencia.entidades.Producto</class>
+		<class>persistencia.entidades.PuntoRetiro</class>
+		<class>persistencia.entidades.Ronda</class>
+		<class>persistencia.entidades.Rubro</class>
+		<class>persistencia.entidades.Usuario</class>
+		
+		<properties>
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.password" value="grupo10" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/BaseDeDatos10" />
+			<property name="hibernate.connection.username" value="root" />
+			<!-- <property name="hibernate.default_schema" value="" /> -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+	</persistence-unit>
+</persistence>
